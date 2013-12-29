@@ -157,13 +157,13 @@ function runServer() {
         console.log(req.body);
 
         // Push to stacks
-        if (req.body.show && req.body.show.trim().length >= 3 && req.body.show.trim().length < 25) {
+        if (req.body.show && req.body.show.trim().length >= 3 && req.body.show.trim().length < 16) {
             showStack.push(req.body.show);
         }
-        if (req.body.draw && req.body.draw.trim().length >= 3 && req.body.draw.trim().length < 25) {
+        if (req.body.draw && req.body.draw.trim().length >= 3 && req.body.draw.trim().length < 16) {
             drawStack.push(req.body.draw);
         }
-        if (req.body.explain && req.body.explain.trim().length >= 3 && req.body.explain.trim().length < 25) {
+        if (req.body.explain && req.body.explain.trim().length >= 3 && req.body.explain.trim().length < 16) {
             explainStack.push(req.body.explain);
         }
 
