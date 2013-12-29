@@ -8,9 +8,9 @@ var db = new sqlite3.Database('DataFile');
 var _ = require('underscore');
 
 // Prepare table and start server afterwards
-db.run("CREATE TABLE IF NOT EXISTS Cards (showA TEXT, showB TEXT," +
-    "drawA TEXT, drawB TEXT," +
-    "explainA TEXT, explainB TEXT)", runServer);
+db.run("CREATE TABLE IF NOT EXISTS Cards (showA TEXT unique, showB TEXT unique," +
+    "drawA TEXT unique, drawB TEXT unique," +
+    "explainA TEXT unique, explainB TEXT unique)", runServer);
 
 function runServer() {
     // Import the server stuff
@@ -130,12 +130,24 @@ function runServer() {
 
             console.log("Inserting new card...");
 
+            var showA = showStack.shift(),
+                showB = showStack.shift(),
+                drawA = drawStack.shift(),
+                drawB = drawStack.shift(),
+                explainA = explainStack.shift(),
+                explainB = explainStack.shift();
+
+            if (showA == showB || drawA == drawB || explainA == explainB) {
+                return;
+            }
+
             // Store word in data base
             db.run("INSERT INTO Cards VALUES ('"
-                + showStack.shift() + "', '" + showStack.shift() + "', '"
-                + drawStack.shift() + "', '" + drawStack.shift() + "', '"
-                + explainStack.shift() + "', '" + explainStack.shift()
-                + "')");
+                + showA + "', '" + showB + "', '"
+                + drawA + "', '" + drawB + "', '"
+                + explainA + "', '" + explainB
+                + "')", function (err, res) {
+            });
         }
     }
 
