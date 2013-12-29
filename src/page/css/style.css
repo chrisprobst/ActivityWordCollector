@@ -1,0 +1,47 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+
+    background-image: -webkit-linear-gradient(white 0%, #AAAAAA 100%);
+    background-image: -moz-linear-gradient(white 0%, #AAAAAA 100%);
+    background-image: -o-linear-gradient(white 0%, #AAAAAA 100%);
+    background-image: linear-gradient(white 0%, #AAAAAA 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container {
+    margin: 10% 25% 25% 25%;
+    text-align: center;
+    font-family: fantasy;
+}
+
+form {
+    margin: 25px;
+}
+
+h2 {
+    font-size: 140%;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 260%;
+}
+
+label {
+    display: block;
+    font-size: 140%;
+}
+
+input {
+    font-size: 24px;
+    text-align: center;
+}
+
+a {
+    font-size: 170%;
+}

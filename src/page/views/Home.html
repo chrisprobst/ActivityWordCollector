@@ -1,0 +1,24 @@
+<div class="container">
+
+    <h1>Activity Wortsammlung</h1>
+    <hr/>
+    <h2 ng-click="uploadWord()">Nenne Begriffe um die Wortsammlung zu erweitern!</h2>
+
+    <form ng-submit="uploadWord()">
+        <label for="show">Pantomime</label>
+        <input id="show" ng-model="words.show" type="text" />
+    </form>
+
+    <form ng-submit="uploadWord()">
+        <label for="draw">Zeichnen</label>
+        <input id="draw" ng-model="words.draw" type="text" />
+    </form>
+
+    <form ng-submit="uploadWord()">
+        <label for="explain">Erklären</label>
+        <input id="explain" ng-model="words.explain" type="text" />
+    </form>
+
+    <a href="/print">Karten drucken !</a>
+</div>
+
