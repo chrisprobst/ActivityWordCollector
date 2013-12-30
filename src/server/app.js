@@ -57,7 +57,7 @@ function runServer() {
 
             // HR
             doc.moveTo(50, offset + 50)
-                .lineTo(550, offset + 50).stroke();
+                .lineTo(562, offset + 50).stroke();
 
             // The words
             for (var i = 0; i < card[key].length; i++) {
@@ -74,7 +74,7 @@ function runServer() {
         var doc = new pdf();
         for (var i = 0; i < cards.length; i++) {
             // The border
-            doc.roundedRect(25, 25, doc.page.width - 50, doc.page.height - 50, 25).stroke();
+            doc.roundedRect(50, 50, doc.page.width - 100, doc.page.height - 100, 25).stroke();
 
             // Render a single card
             renderCardToPDF(doc, cards[i]);
